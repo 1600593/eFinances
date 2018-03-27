@@ -62,43 +62,7 @@ namespace eFinancesWF
 
     }
 
-    public enum EnvironmentEnum 
-    {
-        Windows,
-        Web,
-        WebMobile,
-        IOS,
-        Android
-    }
 
-    public interface IApplicationContext
-    {
-        EnvironmentEnum Environment { get; }
-    }
-
-    public interface IApplicationController
-    {
-        void AssignModel(IApplicationModel caixa_model);
-    }
-
-    public interface IApplicationModel
-    {
-
-    }
-
-    public interface IApplicationView
-    {
-        void AssignView(IApplicationView caixa_view);
-        void Show();
-    }
-
-    public static class ApplicationFactory<T>
-    {
-        public static T GetInstance(IApplicationContext ctx, string Action)
-        {
-            throw new NotImplementedException();
-        }
-    }
 
 
 }
