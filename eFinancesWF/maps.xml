@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ModelViewControllerMaps>
   
-  <Environment name="Windows">
+  <WindowsEnvironment>
+    <Action Name="AddMovimentoCaixa" Model="eFinancesWF.CaixaModel,eFinancesWF" View="eFinancesWF.CaixaView,eFinancesWF" Controller="eFinancesWF.CaixaController,eFinancesWF" />
+  </WindowsEnvironment>
 
-    <Action Name="AddMovimentoCaixa">
-      <Model>eFinancesWF.CaixaModel</Model>
-      <View>eFinancesWF.CaixaView</View>
-      <Controller>eFinancesWF.CaixaController</Controller>      
-    </Action>
-    
-  </Environment>
+  <WebEnvironment></WebEnvironment>
+
+  <WebMobileEnvironment></WebMobileEnvironment>
+
+  <IOSEnvironment></IOSEnvironment>
+
+  <AndriodEnvironment></AndriodEnvironment>
 
 </ModelViewControllerMaps>

@@ -11,9 +11,19 @@ namespace eFinancesWF
 {
     public partial class frmMovimentoCAIXA : Form
     {
-        public frmMovimentoCAIXA()
+
+        eFinances.Common.IApplicationController _controller = null;
+
+        private frmMovimentoCAIXA()
         {
+
+        }
+
+        public frmMovimentoCAIXA(eFinances.Common.IApplicationController Controller)
+        {
+            _controller = Controller;
             InitializeComponent();
         }
+
     }
 }

@@ -7,7 +7,7 @@ namespace eFinances.Common
 {
     public interface IApplicationView
     {
-        void AssignView(IApplicationView caixa_view);
-        void Show();
+        void AssignController(IApplicationController controller);
+        object Show();
     }
 }

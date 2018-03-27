@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaixaController.cs" />
+    <Compile Include="CaixaModel.cs" />
+    <Compile Include="CaixaView.cs" />
     <Compile Include="frmMovimentoCAIXA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,7 +84,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="maps.xml" />
+    <Content Include="maps.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

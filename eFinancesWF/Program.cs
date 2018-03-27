@@ -22,18 +22,9 @@ namespace eFinancesWF
 
             string action = "AddMovimentoCaixa";
 
-            IApplicationController caixa_controller = ApplicationFactory<IApplicationController>.GetInstance(ctx, action);
-            IApplicationModel caixa_model = ApplicationFactory<IApplicationModel>.GetInstance(ctx, action);
-            IApplicationView caixa_view = ApplicationFactory<IApplicationView>.GetInstance(ctx, action);
+            IModelViewControllerAdapter adapter = ApplicationFactory.GetInstance(ctx, action);
+            Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
 
-            caixa_controller.AssignModel(caixa_model);
-            caixa_view.AssignView(caixa_view);
-
-            caixa_view.Show();
-
-            Application.Run();
-
-            Application.Run(new frmMovimentoCAIXA());
         }
     }
 
