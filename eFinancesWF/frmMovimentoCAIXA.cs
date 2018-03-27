@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace eFinancesWF
 {
-    public partial class Form1 : Form
+    public partial class frmMovimentoCAIXA : Form
     {
-        public Form1()
+        public frmMovimentoCAIXA()
         {
             InitializeComponent();
         }

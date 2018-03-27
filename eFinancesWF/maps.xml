@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ModelViewControllerMaps>
+  
+  <Environment name="Windows">
+
+    <Action Name="AddMovimentoCaixa">
+      <Model>eFinancesWF.CaixaModel</Model>
+      <View>eFinancesWF.CaixaView</View>
+      <Controller>eFinancesWF.CaixaController</Controller>      
+    </Action>
+    
+  </Environment>
+
+</ModelViewControllerMaps>
