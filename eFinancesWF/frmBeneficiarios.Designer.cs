@@ -34,12 +34,14 @@
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgvCategorias = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboTipoBeneficiario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(401, 146);
+            this.btnSair.Location = new System.Drawing.Point(400, 175);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(103, 23);
             this.btnSair.TabIndex = 13;
@@ -48,7 +50,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(401, 93);
+            this.btnEliminar.Location = new System.Drawing.Point(400, 122);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(103, 23);
             this.btnEliminar.TabIndex = 12;
@@ -57,7 +59,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(401, 64);
+            this.btnModificar.Location = new System.Drawing.Point(400, 93);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(103, 23);
             this.btnModificar.TabIndex = 11;
@@ -66,19 +68,20 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(401, 35);
+            this.btnAdicionar.Location = new System.Drawing.Point(400, 64);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(103, 23);
             this.btnAdicionar.TabIndex = 10;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // dgvCategorias
             // 
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(12, 35);
+            this.dgvCategorias.Location = new System.Drawing.Point(12, 64);
             this.dgvCategorias.Name = "dgvCategorias";
-            this.dgvCategorias.Size = new System.Drawing.Size(382, 351);
+            this.dgvCategorias.Size = new System.Drawing.Size(382, 322);
             this.dgvCategorias.TabIndex = 9;
             // 
             // label2
@@ -91,11 +94,35 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Gerir Beneficiários";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Tipo Beneficiário: ";
+            // 
+            // cboTipoBeneficiario
+            // 
+            this.cboTipoBeneficiario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoBeneficiario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTipoBeneficiario.FormattingEnabled = true;
+            this.cboTipoBeneficiario.Items.AddRange(new object[] {
+            "EMPREGADO",
+            "CLIENTE"});
+            this.cboTipoBeneficiario.Location = new System.Drawing.Point(110, 33);
+            this.cboTipoBeneficiario.Name = "cboTipoBeneficiario";
+            this.cboTipoBeneficiario.Size = new System.Drawing.Size(132, 21);
+            this.cboTipoBeneficiario.TabIndex = 15;
+            // 
             // frmBeneficiarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 393);
+            this.Controls.Add(this.cboTipoBeneficiario);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -118,5 +145,7 @@
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.DataGridView dgvCategorias;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboTipoBeneficiario;
     }
 }

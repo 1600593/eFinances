@@ -23,7 +23,10 @@ namespace eFinancesWF
             string action = "AddMovimentoCaixa";
 
             IModelViewControllerAdapter adapter = ApplicationFactory.GetInstance(ctx, action);
-            Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
+            //Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
+
+            Application.Run(new frmDashboard());
+
 
         }
     }

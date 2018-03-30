@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,11 +53,17 @@
     <Compile Include="frmBeneficiarios.Designer.cs">
       <DependentUpon>frmBeneficiarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDadosBeneficiario.cs">
+    <Compile Include="frmDadosBeneficiarioCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDadosBeneficiario.Designer.cs">
-      <DependentUpon>frmDadosBeneficiario.cs</DependentUpon>
+    <Compile Include="frmDadosBeneficiarioCliente.Designer.cs">
+      <DependentUpon>frmDadosBeneficiarioCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDadosBeneficiarioEmpregado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDadosBeneficiarioEmpregado.Designer.cs">
+      <DependentUpon>frmDadosBeneficiarioEmpregado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCategorias.cs">
       <SubType>Form</SubType>
@@ -70,11 +77,23 @@
     <Compile Include="frmDadosCategoria.Designer.cs">
       <DependentUpon>frmDadosCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDadosDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDadosDepartamento.Designer.cs">
+      <DependentUpon>frmDadosDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDadosSubCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDadosSubCategoria.Designer.cs">
       <DependentUpon>frmDadosSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDepartamento.cs">
       <SubType>Form</SubType>
@@ -82,11 +101,29 @@
     <Compile Include="frmDepartamento.Designer.cs">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimentoCAIXA.cs">
+    <Compile Include="frmEscolhaBANCOS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMovimentoCAIXA.Designer.cs">
-      <DependentUpon>frmMovimentoCAIXA.cs</DependentUpon>
+    <Compile Include="frmEscolhaBANCOS.Designer.cs">
+      <DependentUpon>frmEscolhaBANCOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEscolhaCAIXA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEscolhaCAIXA.Designer.cs">
+      <DependentUpon>frmEscolhaCAIXA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimentoCAIXAEntrada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimentoCAIXAEntrada.Designer.cs">
+      <DependentUpon>frmMovimentoCAIXAEntrada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimentoCAIXASaida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimentoCAIXASaida.Designer.cs">
+      <DependentUpon>frmMovimentoCAIXASaida.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSubCategorias.cs">
       <SubType>Form</SubType>
@@ -99,8 +136,11 @@
     <EmbeddedResource Include="frmBeneficiarios.resx">
       <DependentUpon>frmBeneficiarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDadosBeneficiario.resx">
-      <DependentUpon>frmDadosBeneficiario.cs</DependentUpon>
+    <EmbeddedResource Include="frmDadosBeneficiarioCliente.resx">
+      <DependentUpon>frmDadosBeneficiarioCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDadosBeneficiarioEmpregado.resx">
+      <DependentUpon>frmDadosBeneficiarioEmpregado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCategorias.resx">
       <DependentUpon>frmCategorias.cs</DependentUpon>
@@ -108,14 +148,29 @@
     <EmbeddedResource Include="frmDadosCategoria.resx">
       <DependentUpon>frmDadosCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDadosDepartamento.resx">
+      <DependentUpon>frmDadosDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDadosSubCategoria.resx">
       <DependentUpon>frmDadosSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimentoCAIXA.resx">
-      <DependentUpon>frmMovimentoCAIXA.cs</DependentUpon>
+    <EmbeddedResource Include="frmEscolhaBANCOS.resx">
+      <DependentUpon>frmEscolhaBANCOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEscolhaCAIXA.resx">
+      <DependentUpon>frmEscolhaCAIXA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimentoCAIXAEntrada.resx">
+      <DependentUpon>frmMovimentoCAIXAEntrada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimentoCAIXASaida.resx">
+      <DependentUpon>frmMovimentoCAIXASaida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubCategorias.resx">
       <DependentUpon>frmSubCategorias.cs</DependentUpon>

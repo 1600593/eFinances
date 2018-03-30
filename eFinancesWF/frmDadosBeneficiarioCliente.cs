@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace eFinancesWF
 {
-    public partial class frmDadosBeneficiario : Form
+    public partial class frmDadosBeneficiarioCliente : Form
     {
-        public frmDadosBeneficiario()
+        public frmDadosBeneficiarioCliente()
         {
             InitializeComponent();
+        }
+
+        private void btnGerirCategoria_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

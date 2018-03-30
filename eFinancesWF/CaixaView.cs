@@ -17,7 +17,7 @@ namespace eFinancesWF
 
         public object Show()
         {
-            return new frmMovimentoCAIXA(_controller);
+            return new frmMovimentoCAIXASaida(_controller);
         }
     }
 }

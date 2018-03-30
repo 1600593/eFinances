@@ -1,6 +1,6 @@
 ﻿namespace eFinancesWF
 {
-    partial class frmMovimentoCAIXA
+    partial class frmMovimentoCAIXASaida
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDataMovimento = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cboTipoMovimento = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
@@ -50,22 +48,29 @@
             this.btnGerirSubCategoria = new System.Windows.Forms.Button();
             this.cboSubCategoria = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 9);
+            this.label1.Location = new System.Drawing.Point(8, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 26);
+            this.label1.Size = new System.Drawing.Size(326, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Movimentos de CAIXA";
+            this.label1.Text = "Movimentos de CAIXA -- SAÍDA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 89);
+            this.label2.Location = new System.Drawing.Point(28, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 1;
@@ -74,7 +79,7 @@
             // dtpDataMovimento
             // 
             this.dtpDataMovimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDataMovimento.Location = new System.Drawing.Point(179, 86);
+            this.dtpDataMovimento.Location = new System.Drawing.Point(182, 8);
             this.dtpDataMovimento.MaxDate = new System.DateTime(2018, 3, 27, 0, 0, 0, 0);
             this.dtpDataMovimento.MinDate = new System.DateTime(2018, 3, 27, 0, 0, 0, 0);
             this.dtpDataMovimento.Name = "dtpDataMovimento";
@@ -82,27 +87,10 @@
             this.dtpDataMovimento.TabIndex = 2;
             this.dtpDataMovimento.Value = new System.DateTime(2018, 3, 27, 0, 0, 0, 0);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Tipo de Movimento:";
-            // 
-            // cboTipoMovimento
-            // 
-            this.cboTipoMovimento.FormattingEnabled = true;
-            this.cboTipoMovimento.Location = new System.Drawing.Point(179, 54);
-            this.cboTipoMovimento.Name = "cboTipoMovimento";
-            this.cboTipoMovimento.Size = new System.Drawing.Size(140, 21);
-            this.cboTipoMovimento.TabIndex = 0;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 115);
+            this.label4.Location = new System.Drawing.Point(28, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 13);
             this.label4.TabIndex = 5;
@@ -110,7 +98,7 @@
             // 
             // txtDescricao
             // 
-            this.txtDescricao.Location = new System.Drawing.Point(179, 115);
+            this.txtDescricao.Location = new System.Drawing.Point(182, 34);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(385, 49);
@@ -119,7 +107,7 @@
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(179, 174);
+            this.cboCategoria.Location = new System.Drawing.Point(182, 89);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(217, 21);
             this.cboCategoria.TabIndex = 8;
@@ -127,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 179);
+            this.label5.Location = new System.Drawing.Point(28, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 7;
@@ -135,7 +123,7 @@
             // 
             // btnGerirCategoria
             // 
-            this.btnGerirCategoria.Location = new System.Drawing.Point(402, 176);
+            this.btnGerirCategoria.Location = new System.Drawing.Point(405, 91);
             this.btnGerirCategoria.Name = "btnGerirCategoria";
             this.btnGerirCategoria.Size = new System.Drawing.Size(28, 19);
             this.btnGerirCategoria.TabIndex = 9;
@@ -145,7 +133,7 @@
             // 
             // btnGerirBeneficiario
             // 
-            this.btnGerirBeneficiario.Location = new System.Drawing.Point(521, 231);
+            this.btnGerirBeneficiario.Location = new System.Drawing.Point(613, 148);
             this.btnGerirBeneficiario.Name = "btnGerirBeneficiario";
             this.btnGerirBeneficiario.Size = new System.Drawing.Size(28, 19);
             this.btnGerirBeneficiario.TabIndex = 12;
@@ -156,15 +144,15 @@
             // cboBeneficiario
             // 
             this.cboBeneficiario.FormattingEnabled = true;
-            this.cboBeneficiario.Location = new System.Drawing.Point(179, 231);
+            this.cboBeneficiario.Location = new System.Drawing.Point(311, 146);
             this.cboBeneficiario.Name = "cboBeneficiario";
-            this.cboBeneficiario.Size = new System.Drawing.Size(338, 21);
+            this.cboBeneficiario.Size = new System.Drawing.Size(296, 21);
             this.cboBeneficiario.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 236);
+            this.label6.Location = new System.Drawing.Point(26, 151);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 10;
@@ -173,7 +161,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 265);
+            this.label8.Location = new System.Drawing.Point(26, 180);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 16;
@@ -181,14 +169,14 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(179, 258);
+            this.txtValor.Location = new System.Drawing.Point(182, 173);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(182, 20);
             this.txtValor.TabIndex = 17;
             // 
             // btnProcessar
             // 
-            this.btnProcessar.Location = new System.Drawing.Point(179, 299);
+            this.btnProcessar.Location = new System.Drawing.Point(182, 216);
             this.btnProcessar.Name = "btnProcessar";
             this.btnProcessar.Size = new System.Drawing.Size(123, 38);
             this.btnProcessar.TabIndex = 18;
@@ -198,7 +186,7 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(346, 299);
+            this.btnCancelar.Location = new System.Drawing.Point(334, 216);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(123, 38);
             this.btnCancelar.TabIndex = 19;
@@ -209,7 +197,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(359, 9);
+            this.label9.Location = new System.Drawing.Point(483, 2);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(205, 26);
             this.label9.TabIndex = 20;
@@ -219,16 +207,16 @@
             // 
             this.label10.BackColor = System.Drawing.Color.LemonChiffon;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(367, 35);
+            this.label10.Location = new System.Drawing.Point(493, 27);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(197, 26);
+            this.label10.Size = new System.Drawing.Size(192, 26);
             this.label10.TabIndex = 21;
-            this.label10.Text = "1.000.000,00";
+            this.label10.Text = "0,00";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnGerirSubCategoria
             // 
-            this.btnGerirSubCategoria.Location = new System.Drawing.Point(402, 206);
+            this.btnGerirSubCategoria.Location = new System.Drawing.Point(405, 121);
             this.btnGerirSubCategoria.Name = "btnGerirSubCategoria";
             this.btnGerirSubCategoria.Size = new System.Drawing.Size(28, 19);
             this.btnGerirSubCategoria.TabIndex = 24;
@@ -238,7 +226,7 @@
             // cboSubCategoria
             // 
             this.cboSubCategoria.FormattingEnabled = true;
-            this.cboSubCategoria.Location = new System.Drawing.Point(179, 204);
+            this.cboSubCategoria.Location = new System.Drawing.Point(182, 119);
             this.cboSubCategoria.Name = "cboSubCategoria";
             this.cboSubCategoria.Size = new System.Drawing.Size(217, 21);
             this.cboSubCategoria.TabIndex = 23;
@@ -246,48 +234,96 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 209);
+            this.label7.Location = new System.Drawing.Point(26, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 22;
             this.label7.Text = "Sub-Categoria: ";
             // 
-            // frmMovimentoCAIXA
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.61111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.38889F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 345);
+            this.tableLayoutPanel1.TabIndex = 25;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(694, 58);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.txtDescricao);
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.btnGerirSubCategoria);
+            this.panel2.Controls.Add(this.btnProcessar);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.cboSubCategoria);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.dtpDataMovimento);
+            this.panel2.Controls.Add(this.cboCategoria);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.txtValor);
+            this.panel2.Controls.Add(this.btnGerirCategoria);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.btnGerirBeneficiario);
+            this.panel2.Controls.Add(this.cboBeneficiario);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(694, 275);
+            this.panel2.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "EMPREGADO",
+            "CLIENTE"});
+            this.comboBox1.Location = new System.Drawing.Point(182, 146);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(123, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // frmMovimentoCAIXASaida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(576, 349);
-            this.Controls.Add(this.btnGerirSubCategoria);
-            this.Controls.Add(this.cboSubCategoria);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnProcessar);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnGerirBeneficiario);
-            this.Controls.Add(this.cboBeneficiario);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnGerirCategoria);
-            this.Controls.Add(this.cboCategoria);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.cboTipoMovimento);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtpDataMovimento);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(700, 345);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmMovimentoCAIXA";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Movimentos de Caixa";
+            this.Name = "frmMovimentoCAIXASaida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Movimentos de Caixa -- SAIDA";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -296,8 +332,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpDataMovimento;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboTipoMovimento;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.ComboBox cboCategoria;
@@ -315,6 +349,10 @@
         private System.Windows.Forms.Button btnGerirSubCategoria;
         private System.Windows.Forms.ComboBox cboSubCategoria;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

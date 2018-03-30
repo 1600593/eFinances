@@ -9,25 +9,26 @@ using System.Windows.Forms;
 
 namespace eFinancesWF
 {
-    public partial class frmMovimentoCAIXA : Form
+    public partial class frmMovimentoCAIXASaida : Form
     {
 
         eFinances.Common.IApplicationController _controller = null;
 
-        private frmMovimentoCAIXA()
+        public frmMovimentoCAIXASaida()
         {
-
+            InitializeComponent();
         }
 
-        public frmMovimentoCAIXA(eFinances.Common.IApplicationController Controller)
+        public frmMovimentoCAIXASaida(eFinances.Common.IApplicationController Controller)
         {
-            _controller = Controller;
             InitializeComponent();
+            _controller = Controller;
+            
         }
 
         private void btnGerirBeneficiario_Click(object sender, EventArgs e)
         {
-            frmDadosBeneficiario frm = new frmDadosBeneficiario();
+            frmBeneficiarios frm = new frmBeneficiarios();
             frm.ShowDialog();
         }
 
