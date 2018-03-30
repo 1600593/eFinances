@@ -17,9 +17,7 @@ namespace eFinances.Common
             {
 
                 /*
-
                 in future releases of this code we will have a class to abstract all these and simplify the code...
-
                 */
 
                 ModelViewControllerBase mvc = new ModelViewControllerBase();
@@ -94,7 +92,10 @@ namespace eFinances.Common
                     mvc.View.AssignController(mvc.Controller);
                    
                 }
-
+                else
+                {
+                    throw new Exception("Invalid map table or MVC classes not implmented.");
+                }
 
                 return mvc;
 

@@ -25,5 +25,15 @@ namespace eFinancesWF
             InitializeComponent();
         }
 
+        private void btnGerirBeneficiario_Click(object sender, EventArgs e)
+        {
+            frmDadosBeneficiario frm = new frmDadosBeneficiario();
+            frm.ShowDialog();
+        }
+
+        private void btnGerirCategoria_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

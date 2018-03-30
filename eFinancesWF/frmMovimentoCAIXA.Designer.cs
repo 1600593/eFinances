@@ -141,6 +141,7 @@
             this.btnGerirCategoria.TabIndex = 9;
             this.btnGerirCategoria.Text = "...";
             this.btnGerirCategoria.UseVisualStyleBackColor = true;
+            this.btnGerirCategoria.Click += new System.EventHandler(this.btnGerirCategoria_Click);
             // 
             // btnGerirBeneficiario
             // 
@@ -150,6 +151,7 @@
             this.btnGerirBeneficiario.TabIndex = 12;
             this.btnGerirBeneficiario.Text = "...";
             this.btnGerirBeneficiario.UseVisualStyleBackColor = true;
+            this.btnGerirBeneficiario.Click += new System.EventHandler(this.btnGerirBeneficiario_Click);
             // 
             // cboBeneficiario
             // 

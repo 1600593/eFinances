@@ -46,16 +46,79 @@
     <Compile Include="CaixaController.cs" />
     <Compile Include="CaixaModel.cs" />
     <Compile Include="CaixaView.cs" />
+    <Compile Include="frmBeneficiarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBeneficiarios.Designer.cs">
+      <DependentUpon>frmBeneficiarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDadosBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDadosBeneficiario.Designer.cs">
+      <DependentUpon>frmDadosBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategorias.Designer.cs">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDadosCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDadosCategoria.Designer.cs">
+      <DependentUpon>frmDadosCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDadosSubCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDadosSubCategoria.Designer.cs">
+      <DependentUpon>frmDadosSubCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMovimentoCAIXA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMovimentoCAIXA.Designer.cs">
       <DependentUpon>frmMovimentoCAIXA.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSubCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubCategorias.Designer.cs">
+      <DependentUpon>frmSubCategorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBeneficiarios.resx">
+      <DependentUpon>frmBeneficiarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDadosBeneficiario.resx">
+      <DependentUpon>frmDadosBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategorias.resx">
+      <DependentUpon>frmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDadosCategoria.resx">
+      <DependentUpon>frmDadosCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDadosSubCategoria.resx">
+      <DependentUpon>frmDadosSubCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMovimentoCAIXA.resx">
       <DependentUpon>frmMovimentoCAIXA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubCategorias.resx">
+      <DependentUpon>frmSubCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
