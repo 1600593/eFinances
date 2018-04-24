@@ -2,6 +2,7 @@
 <ModelViewControllerMaps>
   
   <WindowsEnvironment>
+    <Action Name="MAINMENU" Model="eFinancesWF.Models.MainModel,eFinancesWF" View="eFinancesWF.Views.MainView,eFinancesWF" Controller="eFinancesWF.Controllers.MainController,eFinancesWF" />
     <Action Name="AddMovimentoCaixa" Model="eFinancesWF.CaixaModel,eFinancesWF" View="eFinancesWF.CaixaView,eFinancesWF" Controller="eFinancesWF.CaixaController,eFinancesWF" />
   </WindowsEnvironment>
 

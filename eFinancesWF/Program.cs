@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 
 using eFinances.Common;
+using eFinances.App.Common;
 
 namespace eFinancesWF
 {
@@ -20,12 +21,12 @@ namespace eFinancesWF
 
             IApplicationContext ctx = new ContextBase();
 
-            string action = "AddMovimentoCaixa";
+            string action = "MAINMENU";
 
             IModelViewControllerAdapter adapter = ApplicationFactory.GetInstance(ctx, action);
-            //Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
+            Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
 
-            Application.Run(new frmDashboard());
+            //Application.Run(new frmDashboard());
 
 
         }

@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaixaController.cs" />
-    <Compile Include="CaixaModel.cs" />
-    <Compile Include="CaixaView.cs" />
+    <Compile Include="Controllers\CaixaController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Models\CaixaModel.cs" />
+    <Compile Include="Models\MainModel.cs" />
+    <Compile Include="Views\CaixaView.cs" />
     <Compile Include="frmBeneficiarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,29 +103,11 @@
     <Compile Include="frmDepartamento.Designer.cs">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEscolhaBANCOS.cs">
+    <Compile Include="frmMovimentosCAIXA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEscolhaBANCOS.Designer.cs">
-      <DependentUpon>frmEscolhaBANCOS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEscolhaCAIXA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEscolhaCAIXA.Designer.cs">
-      <DependentUpon>frmEscolhaCAIXA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMovimentoCAIXAEntrada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMovimentoCAIXAEntrada.Designer.cs">
-      <DependentUpon>frmMovimentoCAIXAEntrada.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMovimentoCAIXASaida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMovimentoCAIXASaida.Designer.cs">
-      <DependentUpon>frmMovimentoCAIXASaida.cs</DependentUpon>
+    <Compile Include="frmMovimentosCAIXA.Designer.cs">
+      <DependentUpon>frmMovimentosCAIXA.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSubCategorias.cs">
       <SubType>Form</SubType>
@@ -133,6 +117,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\MainView.cs" />
     <EmbeddedResource Include="frmBeneficiarios.resx">
       <DependentUpon>frmBeneficiarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,17 +145,8 @@
     <EmbeddedResource Include="frmDepartamento.resx">
       <DependentUpon>frmDepartamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEscolhaBANCOS.resx">
-      <DependentUpon>frmEscolhaBANCOS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEscolhaCAIXA.resx">
-      <DependentUpon>frmEscolhaCAIXA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimentoCAIXAEntrada.resx">
-      <DependentUpon>frmMovimentoCAIXAEntrada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimentoCAIXASaida.resx">
-      <DependentUpon>frmMovimentoCAIXASaida.cs</DependentUpon>
+    <EmbeddedResource Include="frmMovimentosCAIXA.resx">
+      <DependentUpon>frmMovimentosCAIXA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubCategorias.resx">
       <DependentUpon>frmSubCategorias.cs</DependentUpon>
@@ -184,7 +160,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -196,9 +174,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\eFinances.App.Common\eFinances.App.Common.csproj">
+      <Project>{5636b6bc-4096-48de-87fc-1779c92872b0}</Project>
+      <Name>eFinances.App.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\eFinances.Common\eFinances.Common.csproj">
       <Project>{a2744ebe-305c-4434-b31d-46b4aff7e2ec}</Project>
       <Name>eFinances.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eFinances.DAL\eFinances.DAL.csproj">
+      <Project>{b425ebca-4625-49bb-8a01-30847cf45f02}</Project>
+      <Name>eFinances.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

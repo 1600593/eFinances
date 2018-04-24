@@ -14,11 +14,18 @@ namespace eFinancesWF
         public frmDashboard()
         {
             InitializeComponent();
+
+            //List<object> prms = new List<object>();
+            //prms.Add(123);
+
+            //string sqlcmd = "Select * from dbo.Categorias where categId = @p1";
+            //DataSet ds = eFinances.DAL.SQLDAL.GetData(sqlcmd, prms);                    
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmEscolhaCAIXA frm = new frmEscolhaCAIXA();
+            frmMovimentosCAIXA frm = new frmMovimentosCAIXA();
             frm.ShowDialog();
         }
 
@@ -29,8 +36,8 @@ namespace eFinancesWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmEscolhaBANCOS frm = new frmEscolhaBANCOS();
-            frm.ShowDialog();
+            //frmEscolhaBANCOS frm = new frmEscolhaBANCOS();
+            //frm.ShowDialog();
         }
     }
 }

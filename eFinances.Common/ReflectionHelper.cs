@@ -2,9 +2,9 @@
 
 namespace eFinances.Common
 {
-    internal class ReflectionHelper<T>
+    public class ReflectionHelper<T>
     {
-        internal static T GetInstanceOf(string className)
+        public static T GetInstanceOf(string className)
         {
             try
             {
