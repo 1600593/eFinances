@@ -7,13 +7,72 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using eFinances.Common;
+using eFinances.App.Common;
+using eFinances.App.Common.EventArgs;
+
 namespace eFinancesWF
 {
-    public partial class frmMovimentosCAIXA : Form
+    public partial class frmMovimentosCAIXA : Form, IApplicationView
     {
-        public frmMovimentosCAIXA()
+
+        private IApplicationModel _model;
+        private IApplicationController _controller;
+
+
+        private frmMovimentosCAIXA()
         {
+            //InitializeComponent();
+        }
+        
+        public frmMovimentosCAIXA(IApplicationController controller)
+        {            
+            _controller = controller;
+            _model = controller.Model;
+
             InitializeComponent();
+
+        }
+
+        public IApplicationController Controller
+        {
+            get
+            {
+                return _controller;
+            }
+        }
+
+        public IApplicationModel Model
+        {
+            get
+            {
+                return _model;
+            }
+        }
+
+        public event EventHandler<ButtonClickedEventArgs> OnButtonClicked;
+
+        //public object StartForm()
+        //{
+        //    return this;
+        //}
+
+        public object StartForm
+        {
+            get
+            {
+                return this;
+            }
+        }
+
+        public void Start()
+        {
+            this.Show();
+        }
+
+        public void Exit()
+        {
+            this.Dispose();
         }
 
         private void btnGerirBeneficiario_Click(object sender, EventArgs e)
@@ -33,5 +92,6 @@ namespace eFinancesWF
             frmSubCategorias frm = new frmSubCategorias();
             frm.ShowDialog();
         }
+
     }
 }

@@ -12,8 +12,7 @@ namespace eFinances.App.Common
     public static class ApplicationFactory
     {
 
-
-        public static IModelViewControllerAdapter GetInstance(IApplicationContext ctx, string Action)
+        public static IModelViewControllerManager GetInstance(IApplicationContext ctx, string Action)
         {
             try
             {
@@ -22,7 +21,7 @@ namespace eFinances.App.Common
                 in future releases of this code we will have a class to abstract all these and simplify the code...
                 */
 
-                ModelViewControllerBase mvc = new ModelViewControllerBase();
+                ModelViewControllerManager mvc = new ModelViewControllerManager();
 
                 string mapTable;
                 string strActionTableName = "Action";   // TODO: get this from config file
@@ -85,13 +84,22 @@ namespace eFinances.App.Common
                     !string.IsNullOrEmpty(viewClassName ) )
                 {
 
-                    mvc.Controller = ReflectionHelper<IApplicationController>.GetInstanceOf(controllerClassName);
-                    mvc.Model = ReflectionHelper<IApplicationModel>.GetInstanceOf(modelClassName);
-                    mvc.View = ReflectionHelper<IApplicationView>.GetInstanceOf(viewClassName);
+
+                    // instanciar o modelo
+                    mvc.Model = ReflectionHelper<IApplicationModel>.GetInstanceOf(modelClassName, null );
+
+                    // instanciar o controlador passando o modelo e app context como referencia 
+                    mvc.Controller = ReflectionHelper<IApplicationController>.GetInstanceOf(controllerClassName, new object[] { ctx, mvc.Model } );
+                    //mvc.Controller.Context = ctx;
+
+                    // instancia o viewer -- por norma esse view vai instanciar um view concreto -- dependendo o environment...
+                    // essa responsabilidade poderia ficar do lado do controller?
+                    mvc.View = ReflectionHelper<IApplicationView>.GetInstanceOf(viewClassName, new object[] { mvc.Controller } );
 
                     // assign the dependencies
-                    mvc.Controller.AssignModel(mvc.Model);
-                    mvc.View.AssignController(mvc.Controller);
+                    //mvc.Controller.View = mvc.View;
+
+                    //mvc.View.AssignController(mvc.Controller);
                    
                 }
                 else

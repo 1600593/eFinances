@@ -16,18 +16,19 @@ namespace eFinancesWF
             InitializeComponent();
         }
 
-        private void btnAdicionar_Click(object sender, EventArgs e)
-        {
-            Form frm;
-            if ( cboTipoBeneficiario.SelectedItem.ToString() == "EMPREGADO"  )
-            {
-                frm = new frmDadosBeneficiarioEmpregado();
-                
-            } else
-            {
-                frm = new frmDadosBeneficiarioCliente();
-            }
-            frm.ShowDialog();
-        }
+        //private void btnAdicionar_Click(object sender, EventArgs e)
+        //{
+        //    Form frm;
+        //    if (cboTipoBeneficiario.SelectedItem.ToString() == "EMPREGADO")
+        //    {
+        //        frm = new frmDadosBeneficiarioEmpregado();
+
+        //    }
+        //    else
+        //    {
+        //        frm = new frmDadosBeneficiarioCliente();
+        //    }
+        //    frm.ShowDialog();
+        //}
     }
 }

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ReferenceData>
+  
+  <Anos>
+    <Ano Id="2018" Text="2018" />
+  </Anos>
+
+  <Meses>
+    <Mes Id="1" Text="Janeiro" />
+    <Mes Id="2" Text="Fevereiro" />
+    <Mes Id="3" Text="Março" />
+    <Mes Id="4" Text="Abril" />
+    <Mes Id="5" Text="Maio" />
+    <Mes Id="6" Text="Junho" />
+    <Mes Id="7" Text="Julho" />
+    <Mes Id="8" Text="Agosto" />
+    <Mes Id="9" Text="Setembro" />
+    <Mes Id="10" Text="Outubro" />
+    <Mes Id="11" Text="Novembro" />
+    <Mes Id="12" Text="Dezembro" />
+  </Meses>
+
+  <MockData>
+
+    <Charts>
+
+      <Chart1 Data="01-Apr-2018" Entrada="123" Saida="75" Saldo="48" />
+      <Chart1 Data="02-Apr-2018" Entrada="454" Saida="235" Saldo="267" />
+      <Chart1 Data="03-Apr-2018" Entrada="232" Saida="200" Saldo="299" />
+      <Chart1 Data="04-Apr-2018" Entrada="133" Saida="156" Saldo="276" />
+      <Chart1 Data="05-Apr-2018" Entrada="454" Saida="150" Saldo="580" />
+      <Chart1 Data="06-Apr-2018" Entrada="12" Saida="300" Saldo="292" />
+      <Chart1 Data="07-Apr-2018" Entrada="67" Saida="300" Saldo="59" />
+
+      <Chart2 Data="Janeiro" Entrada="123" Saida="75" Saldo="48" />
+      <Chart2 Data="Fevereiro" Entrada="454" Saida="235" Saldo="267" />
+      <Chart2 Data="Março" Entrada="232" Saida="200" Saldo="299" />
+      <Chart2 Data="Abril" Entrada="133" Saida="156" Saldo="276" />
+      <Chart2 Data="Maio" Entrada="454" Saida="150" Saldo="580" />
+      <Chart2 Data="Junho" Entrada="12" Saida="300" Saldo="292" />
+      <Chart2 Data="Julho" Entrada="67" Saida="300" Saldo="59" />
+
+      <Chart3 Categoria="Pessoal" Valor="78767" />
+      <Chart3 Categoria="Serviços" Valor="2345534" />
+      <Chart3 Categoria="Alimentação" Valor="4566" />
+
+      <Chart4 Categoria="Manutenção" Valor="435345" />
+      <Chart4 Categoria="Saúde" Valor="1223" />
+      <Chart4 Categoria="Educação" Valor="7886" />
+      
+
+
+    </Charts>
+    
+  </MockData>
+  
+</ReferenceData>

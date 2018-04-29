@@ -39,11 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Controllers\CaixaController.cs" />
-    <Compile Include="Models\CaixaModel.cs" />
+    <Compile Include="CAIXA\Controllers\CaixaController.cs" />
+    <Compile Include="CAIXA\Models\CaixaModel.cs" />
+    <Compile Include="CAIXA\Views\CaixaView.cs" />
+    <Compile Include="MainDashboard\Controllers\MainController.cs" />
+    <Compile Include="MainDashboard\EventArgs\EscolheuAnoEventArgs.cs" />
+    <Compile Include="MainDashboard\EventArgs\EscolheuMesEventArgs.cs" />
+    <Compile Include="MainDashboard\Interfaces\IMainDashboardView.cs" />
+    <Compile Include="MainDashboard\Models\MainModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\CaixaView.cs" />
+    <Compile Include="ReferenceData.cs" />
+    <Compile Include="MainDashboard\Views\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eFinances.App.Common\eFinances.App.Common.csproj">
@@ -54,6 +60,12 @@
       <Project>{a2744ebe-305c-4434-b31d-46b4aff7e2ec}</Project>
       <Name>eFinances.Common</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CAIXA\EventArgs\" />
+    <Folder Include="CAIXA\Exceptions\" />
+    <Folder Include="CAIXA\Interfaces\" />
+    <Folder Include="MainDashboard\Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

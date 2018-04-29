@@ -40,15 +40,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationFactory.cs" />
-    <Compile Include="EnvironmentEnum.cs" />
-    <Compile Include="IApplicationContext.cs" />
-    <Compile Include="IApplicationController.cs" />
-    <Compile Include="IApplicationData.cs" />
-    <Compile Include="IApplicationModel.cs" />
-    <Compile Include="IApplicationView.cs" />
-    <Compile Include="IModelViewControllerAdapter.cs" />
+    <Compile Include="ContextBase.cs" />
+    <Compile Include="ApplicationControllerBase.cs" />
+    <Compile Include="EventArgs\DataChangedEventArgs.cs" />
+    <Compile Include="Enumerations\EnvironmentEnum.cs" />
+    <Compile Include="EventArgs\ButtonClickedEventArgs.cs" />
+    <Compile Include="Exceptions\InvalidApplicationActionException.cs" />
+    <Compile Include="Exceptions\MVCControllerNotDefinedException.cs" />
+    <Compile Include="Exceptions\MVCViewNotSupportedException.cs" />
+    <Compile Include="Interfaces\IApplicationContext.cs" />
+    <Compile Include="Interfaces\IApplicationController.cs" />
+    <Compile Include="Interfaces\IApplicationData.cs" />
+    <Compile Include="Interfaces\IApplicationModel.cs" />
+    <Compile Include="Interfaces\IApplicationView.cs" />
+    <Compile Include="Interfaces\IModelViewControllerManager.cs" />
     <Compile Include="ModelViewControllerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ApplicationViewBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eFinances.Common\eFinances.Common.csproj">
@@ -56,5 +64,6 @@
       <Name>eFinances.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

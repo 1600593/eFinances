@@ -19,45 +19,14 @@ namespace eFinancesWF
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            IApplicationContext ctx = new ContextBase();
 
             string action = "MAINMENU";
+            IApplicationContext ctx = new ContextBase();
+           
+            IModelViewControllerManager mvcManager = ApplicationFactory.GetInstance(ctx, action);
 
-            IModelViewControllerAdapter adapter = ApplicationFactory.GetInstance(ctx, action);
-            Application.Run( (System.Windows.Forms.Form)adapter.View.Show() );
-
-            //Application.Run(new frmDashboard());
-
-
-        }
-    }
-
-    public class ContextBase : IApplicationContext
-    {
-        private EnvironmentEnum _environment;
-
-        public ContextBase()
-        {
-            switch (ConfigurationHelper<string>.GetValue("Environment").ToLower())
-            {
-                case "windows":
-                    _environment = EnvironmentEnum.Windows;
-                    break;
-
-                case "web":
-                    _environment = EnvironmentEnum.Web;
-                    break;
-
-                default:
-                    throw new NotImplementedException("Environment not recognized or not implemented !!!");
-            }
+            Application.Run((System.Windows.Forms.Form)mvcManager.View.StartForm);
         }
 
-        public EnvironmentEnum Environment => _environment;
-
     }
-
-
-
-
 }

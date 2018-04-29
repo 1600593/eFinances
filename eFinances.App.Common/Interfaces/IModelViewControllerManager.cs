@@ -5,7 +5,7 @@ using System.Text;
 
 namespace eFinances.App.Common
 {
-    public interface IModelViewControllerAdapter
+    public interface IModelViewControllerManager
     {
         IApplicationController Controller { get; set;  }
         IApplicationModel Model { get; set; }

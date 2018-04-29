@@ -44,11 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\CaixaController.cs" />
-    <Compile Include="Controllers\MainController.cs" />
-    <Compile Include="Models\CaixaModel.cs" />
-    <Compile Include="Models\MainModel.cs" />
-    <Compile Include="Views\CaixaView.cs" />
     <Compile Include="frmBeneficiarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,7 +112,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MainView.cs" />
     <EmbeddedResource Include="frmBeneficiarios.resx">
       <DependentUpon>frmBeneficiarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -186,11 +180,19 @@
       <Project>{b425ebca-4625-49bb-8a01-30847cf45f02}</Project>
       <Name>eFinances.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eFinances.UI\eFinances.UI.csproj">
+      <Project>{1bb78a33-2a93-4889-923a-cff28b552811}</Project>
+      <Name>eFinances.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="maps.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="REFERENCE_DATA.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
