@@ -13,7 +13,7 @@ namespace eFinances.DAL
 {
     public static class SQLDAL
     {
-        public static DataSet GetData(string SQLCode, List<Object> Parametros)
+        public static DataSet GetData(string SQLCode, object[] Parametros)
         {
             try
             {
@@ -52,7 +52,7 @@ namespace eFinances.DAL
             }
         }
 
-        public static T GetValue<T>(string SQLCode, List<Object> Parametros)
+        public static T GetValue<T>(string SQLCode, object[] Parametros)
         {
             try
             {

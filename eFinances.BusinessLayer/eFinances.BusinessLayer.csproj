@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>b6c272d3-6737-4b4f-9a8c-b05703600bc6</ProjectGuid>
+    <ProjectGuid>{B6C272D3-6737-4B4F-9A8C-B05703600BC6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>eFinances.BusinessLayer</RootNamespace>
@@ -30,22 +30,108 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BeneficiariosBL.cs" />
+    <Compile Include="CategoriasBL.cs" />
+    <Compile Include="Clientes.cs" />
+    <Compile Include="Connected Services\Remote.Services.Clientes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\Remote.Services.Empregados\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Empregados.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubCategoriasBL.cs" />
+    <Compile Include="TipoEntidadeBL.cs" />
+    <Compile Include="TipoMovimentoBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\Remote.Services.Clientes\eFinances.BusinessLayer.Remote.Services.Clientes.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Remote.Services.Clientes\eFinances.ServiceLayer.DataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Clientes\service.wsdl" />
+    <None Include="Connected Services\Remote.Services.Clientes\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Clientes\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Clientes\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Empregados\eFinances.BusinessLayer.Remote.Services.Empregados.Cliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Remote.Services.Empregados\eFinances.ServiceLayer.DataContracts.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Empregados\service.wsdl" />
+    <None Include="Connected Services\Remote.Services.Empregados\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Empregados\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\Remote.Services.Empregados\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Remote.Services.Clientes\" />
+    <WCFMetadataStorage Include="Connected Services\Remote.Services.Empregados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Empregados\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Empregados\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Empregados\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Clientes\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Clientes\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Remote.Services.Clientes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eFinances.DataLayer\eFinances.DataLayer.csproj">
+      <Project>{6bbcac11-83a8-4d0c-9361-0b927bf52aa6}</Project>
+      <Name>eFinances.DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

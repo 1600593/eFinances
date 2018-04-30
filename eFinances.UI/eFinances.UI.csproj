@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CAIXA\Controllers\CaixaController.cs" />
+    <Compile Include="CAIXA\EventArgs\EscolheuBeneficiarioEventArgs.cs" />
+    <Compile Include="CAIXA\EventArgs\EscolheuCategoriaEventArgs.cs" />
+    <Compile Include="CAIXA\EventArgs\EscolheuSubCategoriaEventArgs.cs" />
+    <Compile Include="CAIXA\EventArgs\EscolheuTipoEntidadeEventArgs.cs" />
+    <Compile Include="CAIXA\EventArgs\EscolheuTipoMovimentoEventArgs.cs" />
+    <Compile Include="CAIXA\EventArgs\SalvarMovimentoEventArgs.cs" />
+    <Compile Include="CAIXA\Interfaces\IMovimentosCaixaView.cs" />
     <Compile Include="CAIXA\Models\CaixaModel.cs" />
     <Compile Include="CAIXA\Views\CaixaView.cs" />
     <Compile Include="MainDashboard\Controllers\MainController.cs" />
@@ -56,15 +64,17 @@
       <Project>{5636b6bc-4096-48de-87fc-1779c92872b0}</Project>
       <Name>eFinances.App.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eFinances.BusinessLayer\eFinances.BusinessLayer.csproj">
+      <Project>{b6c272d3-6737-4b4f-9a8c-b05703600bc6}</Project>
+      <Name>eFinances.BusinessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\eFinances.Common\eFinances.Common.csproj">
       <Project>{a2744ebe-305c-4434-b31d-46b4aff7e2ec}</Project>
       <Name>eFinances.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CAIXA\EventArgs\" />
     <Folder Include="CAIXA\Exceptions\" />
-    <Folder Include="CAIXA\Interfaces\" />
     <Folder Include="MainDashboard\Exceptions\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

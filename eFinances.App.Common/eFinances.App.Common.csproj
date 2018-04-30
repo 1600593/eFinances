@@ -47,6 +47,7 @@
     <Compile Include="EventArgs\ButtonClickedEventArgs.cs" />
     <Compile Include="Exceptions\InvalidApplicationActionException.cs" />
     <Compile Include="Exceptions\MVCControllerNotDefinedException.cs" />
+    <Compile Include="Exceptions\MVCInvalidViewOrNotDefinedException.cs" />
     <Compile Include="Exceptions\MVCViewNotSupportedException.cs" />
     <Compile Include="Interfaces\IApplicationContext.cs" />
     <Compile Include="Interfaces\IApplicationController.cs" />

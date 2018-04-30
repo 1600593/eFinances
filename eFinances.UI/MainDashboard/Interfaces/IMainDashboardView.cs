@@ -19,9 +19,6 @@ namespace eFinances.UI.Interfaces
         event EventHandler<EscolheuAnoEventArgs> OnEscolheuAno;
         event EventHandler<EscolheuMesEventArgs> OnEscolheuMes;
 
-        //event EventHandler<ButtonClickedEventArgs> OnButtonClicked;        
-
     }
-
 
 }

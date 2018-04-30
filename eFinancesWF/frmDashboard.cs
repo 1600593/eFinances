@@ -87,7 +87,16 @@ namespace eFinancesWF
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Tem a Certeza que deseja sair?", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ButtonClickedEventArgs a = new ButtonClickedEventArgs()
+                {
+                    ActionName = "EXIT",
+                    ButtonText = button1.Text
+                };
+
+                OnButtonClicked?.Invoke(this, a);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

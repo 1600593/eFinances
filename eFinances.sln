@@ -12,6 +12,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eFinances.DataLayer", "eFinances.DataLayer\eFinances.DataLayer.csproj", "{6BBCAC11-83A8-4D0C-9361-0B927BF52AA6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eFinances.BusinessLayer", "eFinances.BusinessLayer\eFinances.BusinessLayer.csproj", "{B6C272D3-6737-4B4F-9A8C-B05703600BC6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C1CD06A6-AD91-4AE3-8313-C1B1A61A74EC} = {C1CD06A6-AD91-4AE3-8313-C1B1A61A74EC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eFinances.UI", "eFinances.UI\eFinances.UI.csproj", "{1BB78A33-2A93-4889-923A-CFF28B552811}"
 EndProject

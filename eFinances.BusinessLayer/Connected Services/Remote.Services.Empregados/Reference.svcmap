@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15bd1365-5d1a-469f-8f91-15f458e64805" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="38972cf5-595c-49c9-a025-d391b153745a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="39b606bf-4c3f-4ba4-b3bd-285cf7ce4b96" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="f7a0f6f6-a102-40ab-946e-6304d0e98d2b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" />
+    <MetadataFile FileName="System.Data.xsd" MetadataType="Schema" ID="e1c54e8f-3c22-407c-8014-5ee88e00d76c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" />
+    <MetadataFile FileName="eFinances.ServiceLayer.DataContracts.xsd" MetadataType="Schema" ID="851fc911-e5e4-4bc9-a91f-13ca0fcbaf53" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/eFinancesServices/EmpregadosService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

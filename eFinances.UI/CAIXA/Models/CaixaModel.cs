@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Data;
+
 using eFinances.App.Common;
 using eFinances.App.Common.EventArgs;
 
@@ -16,25 +18,28 @@ namespace eFinances.UI.Models
         {
             switch (ActionId)
             {
-                //case "FLUXO_CAIXA_SEMANAL":
-                //    return (T)(object)getFluxoCaixaSemanalChartData(parameters);
+                case "SALDO_CAIXA":
+                    return (T)(object)getSaldoCaixa(parameters);
 
-                //case "FLUXO_CAIXA_MENSAL":
-                //    return (T)(object)getFluxoCaixaMensalChartData(parameters);
+                case "LISTA_CATEGORIAS":
+                    return (T)(object)getListaCategorias(parameters);
 
-                //case "CAIXA_ENTRADA_TOP3":
-                //    return (T)(object)getCaixaEntradaTop3ChartData(parameters);
+                case "LISTA_SUB_CATEGORIAS":
+                    return (T)(object)getListaSubCategorias(parameters);
 
-                //case "CAIXA_SAIDA_TOP3":
-                //    return (T)(object)getCaixaSaidaTop3ChartData(parameters);
+                case "LISTA_TIPO_MOVIMENTO":
+                    return (T)(object)getListaTipoMovimento(parameters);
 
-                //case "LISTA_ANOS":
-                //    return (T)(object)getListaAnos(parameters);
+                case "LISTA_TIPO_ENTIDADE":
+                    return (T)(object)getListaTipoEntidade(parameters);
+
+                case "LISTA_BENEFICIARIOS":
+                    return (T)(object)getListaBeneficiarios(parameters);
 
                 //case "LISTA_MESES":
                 //    return (T)(object)getListaMeses(parameters);
                 default:
-                    throw new ArgumentNullException("Invalid ActionId");
+                    throw new ArgumentNullException($"Invalid ActionId: {ActionId}");
             }
         }
 
@@ -56,9 +61,7 @@ namespace eFinances.UI.Models
                 throw ex;
             }
         }
-
-
-
+   
         public bool InsertData(string ActionId, object[] parameters)
         {
             try
@@ -109,6 +112,78 @@ namespace eFinances.UI.Models
 
                 OnDataChanged?.Invoke(this, e);
                 return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private double getSaldoCaixa(object[] parameters)
+        {
+            int rnd = new Random().Next(100000);
+            return (double)rnd;
+        }
+
+        private object getListaCategorias(object[] parameters)
+        {
+            try
+            {
+                eFinances.BusinessLayer.CategoriasBL categ = new BusinessLayer.CategoriasBL();
+                return categ.GetCategorias();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
+
+        private object getListaSubCategorias(object[] parameters)
+        {
+            try
+            {
+                eFinances.BusinessLayer.SubCategoriasBL categ = new BusinessLayer.SubCategoriasBL();
+                return categ.GetSubCategorias(parameters);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private object getListaTipoEntidade(object[] parameters)
+        {
+            try
+            {
+                eFinances.BusinessLayer.TipoEntidadeBL entidade = new BusinessLayer.TipoEntidadeBL();
+                return entidade.GetTipoEntidades();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private object getListaTipoMovimento(object[] parameters)
+        {
+            try
+            {
+                eFinances.BusinessLayer.TipoMovimentoBL mov = new BusinessLayer.TipoMovimentoBL();
+                return mov.GetTipoMovimentos();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private object getListaBeneficiarios(object[] parameters)
+        {
+            try
+            {
+                eFinances.BusinessLayer.BeneficiariosBL beneficiarios = new BusinessLayer.BeneficiariosBL();
+                return beneficiarios.GetBeneficiarios(parameters);
             }
             catch (Exception ex)
             {

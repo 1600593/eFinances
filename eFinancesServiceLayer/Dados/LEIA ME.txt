@@ -1,0 +1,5 @@
+﻿INSTRUCOES
+
+Deverá indicar no App.Config aonde se encontram os files Clientes.xml e Empregados.xml
+
+    <add key="DATA_FILE_PATH" value="C:\eFinances\Dados\" />

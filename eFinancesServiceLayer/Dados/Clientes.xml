@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Clientes> 
+  
+  <Cliente Id="1" PrimeiroNome="Telma" UltimoNome="Manuel" Telefone="34534534" Email="tmanuel@taag.com" EmpresaId="1" />
+  <Cliente Id="2" PrimeiroNome="Nelson" UltimoNome="Coelho" Telefone="23423423" Email="ncoelho@taag.com" EmpresaId="1" />
+  <Cliente Id="3" PrimeiroNome="Jose" UltimoNome="Trindade" Telefone="232343" Email="trindade@taag.com" EmpresaId="1" />
+  <Cliente Id="4" PrimeiroNome="Joao" UltimoNome="Maria" Telefone="67674" Email="jose.maria@meo.pt" EmpresaId="2" />
+  <Cliente Id="5" PrimeiroNome="Maria" UltimoNome="Joao" Telefone="5345435" Email="maria.jose@meo.pt" EmpresaId="2" />
+  <Cliente Id="6" PrimeiroNome="Ana" UltimoNome="Cintia" Telefone="787878" Email="acintia@unitel.co.ao" EmpresaId="3" />
+  <Cliente Id="7" PrimeiroNome="Sofia" UltimoNome="Cortez" Telefone="5356355" Email="scortez@unitel.co.ao" EmpresaId="3" />
+
+</Clientes>

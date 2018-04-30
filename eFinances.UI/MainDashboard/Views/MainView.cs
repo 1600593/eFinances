@@ -14,7 +14,7 @@ namespace eFinances.UI.Views
     public class MainView : ApplicationViewBase 
     {
 
-        public event EventHandler<ButtonClickedEventArgs> OnButtonClicked;
+        //public event EventHandler<ButtonClickedEventArgs> OnButtonClicked;
 
         private MainView() : base()
         {

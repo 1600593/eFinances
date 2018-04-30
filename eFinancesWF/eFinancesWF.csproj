@@ -176,10 +176,6 @@
       <Project>{a2744ebe-305c-4434-b31d-46b4aff7e2ec}</Project>
       <Name>eFinances.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\eFinances.DAL\eFinances.DAL.csproj">
-      <Project>{b425ebca-4625-49bb-8a01-30847cf45f02}</Project>
-      <Name>eFinances.DAL</Name>
-    </ProjectReference>
     <ProjectReference Include="..\eFinances.UI\eFinances.UI.csproj">
       <Project>{1bb78a33-2a93-4889-923a-cff28b552811}</Project>
       <Name>eFinances.UI</Name>

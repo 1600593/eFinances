@@ -73,8 +73,7 @@ namespace eFinances.App.Common
                     }
                     catch (Exception)
                     {
-                        throw new InvalidApplicationActionException(
-                            String.Format("ActionName: {0} é inválida...", e.ActionName));
+                        throw new InvalidApplicationActionException($"ActionName: {e.ActionName} é inválida...");
                     }
                 }
             }
